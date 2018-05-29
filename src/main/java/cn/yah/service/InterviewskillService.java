@@ -6,9 +6,7 @@ import cn.yah.vo.VoInterviewskill;
 
 import java.util.List;
 
-/**
- * Created by Ww on 2018/5/11.
- */
+
 public interface InterviewskillService {
     List<Interviewskill> list(Page page);
 

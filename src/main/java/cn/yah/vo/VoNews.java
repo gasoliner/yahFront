@@ -3,9 +3,7 @@ import java.util.Date;
 
 import cn.yah.po.News;
 
-/**
- * Created by Ww on 2018/5/18.
- */
+
 public class VoNews extends News {
 
     private String voPublish;

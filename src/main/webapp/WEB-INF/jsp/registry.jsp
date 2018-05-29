@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="Content-Type" content="text/html; charset=gbk">
     <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-    <title>欢迎注册丨前程无忧（51Job）</title>
-    <meta name="description" content="前程无忧为企业提供人才招聘、猎头、培训、测评和人事外包在内的全方位的人力资源服务，帮助个人求职者与企业搭建最佳的人才招募和人才培养渠道">
-    <meta name="keywords" content="人才，招聘，简历，工作，面试，薪酬，跳槽，猎头，培训，测评，人事">
+    <title>欢迎注册丨You Are Hired !</title>
     <meta name="mobile-agent" content="format=html5; url=https://m.51job.com/my/register.php?partner=webmeta">
     <meta name="mobile-agent" content="format=xhtml; url=https://m.51job.com/my/register.php?partner=webmeta">
     <meta name="mobile-agent" content="format=wml; url=https://m.51job.com/my/register.php?partner=webmeta">

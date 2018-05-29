@@ -3,9 +3,7 @@ package cn.yah.vo;
 import cn.yah.po.Interviewskill;
 import cn.yah.po.News;
 
-/**
- * Created by Ww on 2018/5/18.
- */
+
 public class VoInterviewskill extends Interviewskill {
 
     private String voPublish;

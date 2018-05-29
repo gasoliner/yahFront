@@ -2,9 +2,7 @@ package cn.yah.vo;
 
 import cn.yah.po.Mail;
 
-/**
- * Created by Ww on 2018/5/18.
- */
+
 public class VoMail extends Mail {
 
     private String voSender;
