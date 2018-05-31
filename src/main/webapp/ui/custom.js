@@ -1,6 +1,10 @@
 function submitResume(rid) {
     $.post("/recruit/submitResume/" + rid,null,function (data) {
-        alert(data);
+        if (data == "投递成功" || data == "系统出错，请稍后重试") {
+            alert(data);
+        } else {
+            window.location.href = "/login/login_ui";
+        }
     });
 }
 

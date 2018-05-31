@@ -55,6 +55,8 @@
     <script language="javascript" src="//js.51jobcdn.com/in/js/2016/layer/funtype_array_c.js?20180319"></script>
     <script language="javascript" src="//js.51jobcdn.com/in/js/2016/search/pointtrack_search.js?20180319"></script>
 
+    <%--<script type="text/javascript" src="/ui/custom.js"></script>--%>
+
 </head>
 <body>
 <div class="header">
