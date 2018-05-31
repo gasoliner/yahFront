@@ -20,6 +20,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <link rel="canonical" href="https://www.51job.com/">
     <link href="/ui/mymodel/sucai/base.css" rel="stylesheet" type="text/css">
+    <link href="/ui/custom.css" rel="stylesheet" type="text/css">
     <link href="/ui/mymodel/sucai/form.css" rel="stylesheet" type="text/css">
     <link href="/ui/mymodel/sucai/home.css" rel="stylesheet" type="text/css">
     <link href="/ui/mymodel/sucai/panel-pop.css" rel="stylesheet" type="text/css">
@@ -157,8 +158,17 @@
     <div class="blck cn">
         <strong class="tle c_orange">发布我的留言</strong>
         <div style="font-size: 16px;">
-            <form action="/leavemessage/addition">
-
+            <form action="/leavemessage/addition" method="post">
+                <div style="margin: 25px">
+                    <input style="width: 65%" type="text" placeholder="请输入标题..." name="name">
+                </div>
+                <div style="margin: 25px">
+                    <textarea style="width: 65%" class="textareaComment" name="content" placeholder="请输入留言内容..."></textarea>
+                </div>
+                <div style="margin: 25px">
+                    <input  type="submit" style="font-size:16px;width:200px;height:35px;line-height:35px;background:transparent url(/ui/sub.png) no-repeat;border:none;" value="发布留言" >
+                </div>
+                <div>&nbsp;</div>
             </form>
             <%--<p style="width: 70%; margin: 20px;">${leavemessage.content}--%>
                 <%--<br/>--%>
@@ -185,11 +195,13 @@
                         <%--</li>--%>
                     <%--</c:forEach>--%>
                 <%--</ul>--%>
-                    <p style="width: 70%; margin: 20px;">${leavemessage.content}
+                    <p style="width: 80%; margin: 20px;">${leavemessage.content}
                     <br/>
-                        ${leavemessage.publisher}
-                        <br/>
+                        <span id="notice_footer" style="display:block; width: auto; float:right; text-align:right;">
+                                ${leavemessage.publisher}发表于
                             ${leavemessage.voPublish}
+                        </span>
+                        <br/>
                     </p>
                 <div class="clear"></div>
             </div>

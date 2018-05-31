@@ -35,6 +35,7 @@
                 /login/logout = user
                 /mail/** = user
                 /recruit/submitResume/** = user
+                /leavemessage/addition = user
                 /member/personInfo = user
             </value>
         </property>
