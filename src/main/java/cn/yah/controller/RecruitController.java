@@ -1,10 +1,8 @@
 package cn.yah.controller;
 
-import cn.yah.po.Apply;
-import cn.yah.po.Member;
-import cn.yah.po.Page;
-import cn.yah.po.Recruit;
+import cn.yah.po.*;
 import cn.yah.service.ApplyService;
+import cn.yah.service.CategoryService;
 import cn.yah.service.RecruitService;
 import cn.yah.vo.VoRecruit;
 import com.alibaba.fastjson.JSON;
@@ -24,15 +22,30 @@ import java.util.List;
 public class RecruitController {
 
     @Autowired
+    CategoryService categoryService;
+
+    @Autowired
     RecruitService recruitService;
 
     @Autowired
     ApplyService applyService;
 
-    @RequestMapping("/")
-    public String page(HttpServletRequest request) {
-        List<VoRecruit> list = recruitService.vo(recruitService.list(new Page()));
+    @RequestMapping("/{id}")
+    public String page(@PathVariable Integer id, HttpServletRequest request) {
+        List<VoRecruit> list = null;
+        String currentCategory = null;
+        if (id == 0) {
+            list = recruitService.vo(recruitService.list(new Page()));
+            currentCategory = "全 部";
+        } else {
+            list = recruitService.vo(recruitService.listByCategory(id));
+            currentCategory = categoryService.selectByPrimaryKey(id).getName();
+        }
+        List<Category> categoryList = categoryService.list(new Page());
+        request.setAttribute("currentCategory",currentCategory);
+        request.setAttribute("categoryList",categoryList);
         request.setAttribute("recruitList",list);
+
         return "recruit";
     }
 
