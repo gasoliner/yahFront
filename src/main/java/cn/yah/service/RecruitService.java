@@ -21,4 +21,6 @@ public interface RecruitService {
     Recruit selectByPrimaryKey(Integer id);
 
     List<VoRecruit> vo(List<Recruit> list);
+
+    List<Recruit> listByCategory(Integer id);
 }

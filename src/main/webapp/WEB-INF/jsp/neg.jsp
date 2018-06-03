@@ -3,7 +3,7 @@
     <div class="in">
         <p class="nlink">
             <a class="" href="${pageContext.request.contextPath}/">首页</a>
-            <a class="" href="${pageContext.request.contextPath}/recruit/">人才需求</a>
+            <a class="" href="${pageContext.request.contextPath}/recruit/0">人才需求</a>
             <a class="" href="${pageContext.request.contextPath}/jobfair/">招聘会信息</a>
             <a class="" href="${pageContext.request.contextPath}/news/">站内新闻</a>
             <a class="" href="${pageContext.request.contextPath}/interviewskill/">面试技巧</a>

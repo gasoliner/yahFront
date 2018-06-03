@@ -105,6 +105,29 @@
 </div>
 <div class="dw_wp">
 
+    <style>
+        .button1{
+            margin:10px;font-size:16px;width:100px;height:35px;line-height:35px;background:transparent url(/ui/sub.png) no-repeat;border:none;
+        }
+    </style>
+
+    <div id="dw_choice_mk"></div>
+    <div class="dw_choice">
+        <div class="in">
+            <span class="title">当前岗位类别：</span>
+            <p>${currentCategory}</p>
+        </div>
+    </div>
+
+
+    <div>
+        <button onclick="window.location.href='/recruit/0'" class="button1">全 部</button>
+        <c:forEach items="${categoryList}" var="category">
+            <button onclick="window.location.href='/recruit/${category.cid}'" class="button1">${category.name}</button>
+        </c:forEach>
+
+    </div>
+
     <div class="dw_table" id="resultList">
         <div id="dw_tlc_mk"></div>
 

@@ -193,7 +193,7 @@
         <div id="jobfair">
             <ul>
                 <c:forEach items="${jobfairList}" var="jobfair">
-                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·
+                    <li style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·
                         <a target="_blank" title="${jobfair.name}"
                            href="${pageContext.request.contextPath}/jobfair/detail/${jobfair.jfid}" onmousedown="">&nbsp;&nbsp;
                                 ${jobfair.name}
@@ -209,11 +209,11 @@
     <!--famous start-->
     <div class="blck cn">
         <strong class="tle c_orange">企业列表</strong>
-        <div id="famous">
+        <div id="123">
             <%--<ul class="list_left">--%>
             <ul>
                 <c:forEach items="${enterpriseList}" var="enterprise">
-                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·
+                    <li style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·
                         <a target="_blank" title="${enterprise.name}"
                            href="${pageContext.request.contextPath}/enterprise/detail/${enterprise.eid}" onmousedown="">&nbsp;&nbsp;
                                 ${enterprise.name}
@@ -232,7 +232,7 @@
         <%--<ul class="dcon">--%>
         <ul >
             <c:forEach items="${newsList}" var="news">
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·
+                <li style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·
                     <a target="_blank" title="${news.name}"
                        href="${pageContext.request.contextPath}/news/detail/${news.nid}" onmousedown="">&nbsp;&nbsp;
                             ${news.name}

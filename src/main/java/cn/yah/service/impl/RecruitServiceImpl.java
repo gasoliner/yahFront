@@ -77,6 +77,15 @@ public class RecruitServiceImpl implements RecruitService {
     }
 
     @Override
+    public List<Recruit> listByCategory(Integer id) {
+        RecruitExample example = new RecruitExample();
+        RecruitExample.Criteria criteria = example.createCriteria();
+        criteria.andCidEqualTo(id);
+        List<Recruit> list = recruitMapper.selectByExample(example);
+        return list;
+    }
+
+    @Override
     public Recruit selectByPrimaryKey(Integer id) {
         return recruitMapper.selectByPrimaryKey(id);
     }
