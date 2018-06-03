@@ -328,14 +328,8 @@
         });
     })
 </script>
-<div class="footer">
-    <div class="in">
-        <div class="nag">
-            <div class="clear"></div>
-        </div>
+<jsp:include page="footer.jsp"/>
 
-    </div>
-</div>
 <div class="license">
     <div class="in">
         <p class="note">
