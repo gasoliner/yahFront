@@ -57,6 +57,9 @@ public class LoginController {
             if (!(password2 != null && member.getPassword() != null && password2.equals(member.getPassword()))) {
                 throw new Exception();
             }
+            if (!PageUtil.checkIdNumber(member.getIdnumber())) {
+                throw new Exception();
+            }
             memberService.insert(member);
             System.out.println("新增id = " + member.getMid());
             request.setAttribute("new_id",member.getMid());

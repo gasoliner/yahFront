@@ -1,6 +1,7 @@
 package cn.yah.util;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.Test;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +10,8 @@ import java.io.*;
 import java.net.URLConnection;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class PageUtil {
@@ -80,6 +83,17 @@ public class PageUtil {
     public static String getFileNameByFilePath(String filepath){
         String string[] = filepath.split("\\\\");
         return string[string.length-1];
+    }
+
+    public static boolean checkIdNumber(String code) {
+        String reg = "^\\d{15}$|^\\d{17}[0-9Xx]$";
+        Pattern pattern = Pattern.compile(reg);
+        Matcher matcher = pattern.matcher(code);
+        if (matcher.find()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
