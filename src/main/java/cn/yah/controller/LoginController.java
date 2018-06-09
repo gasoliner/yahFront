@@ -55,9 +55,11 @@ public class LoginController {
             member.setResume(PageUtil.uploadAnnex(request, file, "resume", member.getName()));
 //            check
             if (!(password2 != null && member.getPassword() != null && password2.equals(member.getPassword()))) {
+                request.setAttribute("registry_error","两次密码不一致");
                 throw new Exception();
             }
             if (!PageUtil.checkIdNumber(member.getIdnumber())) {
+                request.setAttribute("registry_error","身份证号格式错误");
                 throw new Exception();
             }
             memberService.insert(member);
