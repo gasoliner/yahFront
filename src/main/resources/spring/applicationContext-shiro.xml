@@ -37,6 +37,7 @@
                 /recruit/submitResume/** = user
                 /leavemessage/addition = user
                 /member/personInfo = user
+                /member/personInfo_change = user
             </value>
         </property>
     </bean>
